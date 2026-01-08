@@ -1,0 +1,53 @@
+/* style.css */
+:root {
+    --primary-burgundy: #6d0c26;
+    --accent-yellow: #f1c40f;
+    --text-dark: #333;
+    --bg-light: #f9f9f9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: var(--bg-light); color: var(--text-dark); }
+a { text-decoration: none; }
+
+/* HEADER */
+header {
+    background: var(--primary-burgundy); padding: 1rem 5%;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.logo { color: white; font-weight: bold; font-size: 1.5rem; }
+nav a { color: white; margin-left: 20px; font-weight: 600; }
+nav a:hover { color: var(--accent-yellow); }
+
+/* SLIDER */
+.slider-container { position: relative; height: 60vh; overflow: hidden; }
+.slide {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0; transition: opacity 1s;
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center;
+}
+.slide.active { opacity: 1; }
+.slide h1 { 
+    color: white; font-size: 4rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); 
+    background: rgba(0,0,0,0.3); padding: 20px;
+}
+
+/* CARDS (Homepage) */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 4rem 5%; }
+.card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.card-img { height: 250px; background-size: cover; background-position: center; }
+.card-body { padding: 1.5rem; text-align: center; }
+.card-title { color: var(--primary-burgundy); font-size: 1.5rem; margin-bottom: 10px; display: block; }
+.btn { background: var(--accent-yellow); color: var(--primary-burgundy); padding: 10px 20px; border-radius: 20px; font-weight: bold; display: inline-block; }
+
+/* ITINERARY PAGE STYLES */
+.destination-hero { height: 50vh; background-size: cover; background-position: center; display: flex; align-items: flex-end; }
+.destination-title { background: rgba(0,0,0,0.6); color: white; width: 100%; padding: 2rem 5%; }
+.itinerary-container { max-width: 900px; margin: 3rem auto; padding: 0 20px; }
+.day-row { border-left: 4px solid var(--accent-yellow); padding-left: 20px; margin-bottom: 30px; }
+.day-title { color: var(--primary-burgundy); font-weight: bold; font-size: 1.2rem; }
+
+/* FOOTER */
+footer { background: #4a0518; color: white; padding: 2rem 5%; text-align: center; margin-top: 3rem; }
