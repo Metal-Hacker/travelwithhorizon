@@ -1,15 +1,26 @@
 collections_config:
   destinations:
     path: destinations
-    output: true
-    url: /destinations/[slug].html
     name: Travel Packages
+    icon: notes
+    url: /destinations/[slug].html
+    disable_url: false
     _inputs:
       title:
         type: text
+        cascade: true
       price:
         type: number
+        cascade: true
       image:
         type: image
+        cascade: true
       itinerary:
         type: array
+        cascade: true
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+editor:
+  default_path:
+timezone: Etc/UTC
