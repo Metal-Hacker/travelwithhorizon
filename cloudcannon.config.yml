@@ -1,0 +1,15 @@
+collections_config:
+  destinations:
+    path: destinations
+    output: true
+    url: /destinations/[slug].html
+    name: Travel Packages
+    _inputs:
+      title:
+        type: text
+      price:
+        type: number
+      image:
+        type: image
+      itinerary:
+        type: array
